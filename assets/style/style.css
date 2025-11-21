@@ -3,6 +3,7 @@
   --color-blue-700: #36384d;
   --color-blue-800: #242742;
   --color-red: #ff6155;
+  --color-red--light: #ff605579;
   --color-red-secondary: #ffe7e6;
   --gradient: linear-gradient(#ff6155, #ff527b);
 
@@ -34,7 +35,6 @@ html {
 
 body {
   min-height: 100vh;
-  background-color: var(--color-gray);
 }
 
 /* inputs */
@@ -68,4 +68,28 @@ body {
 .input--notvalid::placeholder {
   color: var(--color-red);
   background-color: var(--color-red-secondary);
+}
+
+/* brn */
+.btn {
+  display: block;
+  width: 100%;
+  border: 0;
+  outline: 0;
+  font-size: var(--fs-pr2);
+  font-weight: 700;
+  color: white;
+  line-height: var(--lh-pr2);
+  padding: 1.6rem 0;
+  border-radius: 0.8rem;
+  background: var(--color-blue-800);
+  cursor: pointer;
+  pointer-events: all;
+  transition: box-shadow 1s;
+}
+
+.btn:hover,
+.btn:active {
+  background: var(--gradient);
+  box-shadow: 0px 16px 32px var(--color-red--light);
 }
