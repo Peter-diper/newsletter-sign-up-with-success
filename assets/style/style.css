@@ -85,11 +85,38 @@ body {
   background: var(--color-blue-800);
   cursor: pointer;
   pointer-events: all;
-  transition: box-shadow 1s;
+  transition: box-shadow 0.2s;
 }
 
 .btn:hover,
 .btn:active {
   background: var(--gradient);
   box-shadow: 0px 16px 32px var(--color-red--light);
+}
+
+/* moudal */
+.moudal {
+  max-width: 50.4rem;
+  padding: var(--space-800);
+  background-color: white;
+  border-radius: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-400);
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
+}
+
+.moudal--title {
+  font-size: var(--fs-pr1-d);
+  font-weight: bold;
+}
+
+.moudal--discription {
+  font-size: var(--fs-pr2);
+  font-weight: 400;
+  color: var(--color-blue-700);
+}
+
+.check--icon {
+  max-width: 6.4rem;
 }
