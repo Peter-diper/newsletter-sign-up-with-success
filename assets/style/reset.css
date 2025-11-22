@@ -7,3 +7,8 @@
   list-style: none;
   font-family: inherit;
 }
+img,
+picture {
+  display: block;
+  width: 100%;
+}
