@@ -28,23 +28,23 @@ function checkEmail(e) {
     return "done";
   }
 
+  const userEmail = document.querySelector("#user--email");
+  userEmail.textContent = email.value;
   setTimeout(() => {
     errorText.classList.add("d-n");
     email.classList.remove("input--notvalid");
     main.classList.add("d-n");
     moudal.classList.remove("d-n");
-    const userEmail = document.querySelector("#user--email");
-    userEmail.textContent = email.value;
     moudal.classList.add("setAnimationIntro");
   }, 600);
   setTimeout(() => {
     moudal.classList.add("setAnimation");
   }, 400);
-  email.value = "";
 }
 
 function hide(e) {
   setTimeout(() => {
+    email.value = "";
     moudal.classList.add("d-n");
     main.classList.remove("d-n");
     main.classList.add("setAnimationIntro");

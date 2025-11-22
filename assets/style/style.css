@@ -132,19 +132,27 @@ body {
 /* moudal */
 .moudal {
   max-width: 50.4rem;
-  padding: var(--space-800);
   background-color: white;
-  border-radius: 3.6rem;
   display: flex;
   flex-direction: column;
   gap: var(--space-400);
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
   z-index: 40;
+  justify-content: center;
+  padding: var(--space-300);
 }
+
+.moudal--btn {
+  margin-top: 15rem;
+}
+
 @media screen and (min-width: 31.25rem) {
   .moudal {
+    border-radius: 3.6rem;
     transform: translateY(-40px);
+    padding: var(--space-800);
     opacity: 0.25;
+    justify-content: start;
   }
   .setAnimationIntro {
     animation: moudal 0.4s ease-in-out;
@@ -152,6 +160,9 @@ body {
   .setAnimation {
     transform: translateY(0rem);
     opacity: 1;
+  }
+  .moudal--btn {
+    margin-top: 0;
   }
 }
 
