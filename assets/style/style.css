@@ -36,7 +36,37 @@ html {
 body {
   min-height: 100vh;
   background-color: var(--color-blue-700);
-  color-interpolation-filters: var(--color-blue-800);
+  color: var(--color-blue-800);
+  display: grid;
+}
+
+/* container */
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 31.25rem) {
+  .container {
+    width: 89vw;
+  }
+  body {
+    place-content: center;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .container {
+    width: 80vw;
+    max-width: 60.7rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .container {
+    max-width: 94rem;
+  }
+}
+
+* {
+  transition: all 0.12s;
 }
 
 /* inputs */
@@ -71,7 +101,7 @@ body {
   background-color: var(--color-red-secondary);
 }
 
-/* brn */
+/* btn */
 .btn {
   display: block;
   width: 100%;
@@ -109,6 +139,20 @@ body {
   flex-direction: column;
   gap: var(--space-400);
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
+  z-index: 40;
+}
+@media screen and (min-width: 31.25rem) {
+  .moudal {
+    transform: translateY(-40px);
+    opacity: 0.25;
+  }
+  .setAnimationIntro {
+    animation: moudal 0.4s ease-in-out;
+  }
+  .setAnimation {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
 }
 
 .moudal--title {
@@ -182,4 +226,71 @@ body {
   font-size: var(--fs-pr2);
   line-height: var(--lh-pr2);
   font-weight: 400;
+}
+.form--header {
+  display: flex;
+  justify-content: space-between;
+}
+.form--header span {
+  color: var(--color-red);
+  font-size: var(--fs-pr3);
+  line-height: var(--lh-pr3);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 31.25rem) {
+  .newsletter--singup {
+    padding: var(--space-500);
+    border-radius: 3.6rem;
+    gap: var(--space-500);
+  }
+  .newsletter--intro {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .newsletter--singup {
+    padding: var(--space-500);
+    border-radius: 3.6rem;
+    flex-direction: row;
+    gap: var(--space-800);
+  }
+  .newsletter--intro {
+    flex: 1 1 50%;
+    padding: 0;
+    align-self: center;
+  }
+  .newsletter-content {
+    gap: var(--space-400);
+  }
+  .img--wrapper {
+    flex: 1 1 50%;
+  }
+}
+.moudal--selectarea {
+  background-color: var(--color-blue-700);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+main {
+  z-index: 10;
+}
+
+.d-n {
+  display: none;
+}
+
+@keyframes moudal {
+  from {
+    transform: translateY(6rem);
+    opacity: 0.25;
+  }
+  to {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
 }

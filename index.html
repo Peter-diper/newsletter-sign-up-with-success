@@ -12,8 +12,24 @@
     <title>newsletter sign up with success</title>
   </head>
   <body>
-    <main>
-      <section action="" novalidate class="newsletter--singup">
+    <div class="moudal--selectarea"></div>
+    <section class="moudal d-n">
+      <img
+        src="./assets/images/icon-success.svg"
+        class="check--icon"
+        alt="tick-icon"
+      />
+      <h2 class="moudal--title">Thanks for subscribing!</h2>
+      <p class="moudal--discription">
+        A confirmation email has been sent to
+        <strong id="user--email">ash@loremcompany.com</strong>. Please open it
+        and click the button inside to confirm your subscription.
+      </p>
+      <button class="btn" id="moudal--btn" type="submit">Dismiss message</button>
+    </section>
+
+    <main class="main--content">
+      <section class="newsletter--singup container">
         <div class="newsletter--intro">
           <div class="newsletter-content">
             <h1 class="newsletter__title">Stay updated!</h1>
@@ -33,7 +49,7 @@
           <form action="" class="form" id="form" novalidate>
             <div class="form--header">
               <label for="">Email address</label>
-              <span class="error--text"></span>
+              <span class="error--text d-n">Valid email required</span>
             </div>
             <div class="form--footer">
               <input
@@ -50,13 +66,13 @@
           </form>
         </div>
 
-        <picture>
+        <picture class="img--wrapper">
           <source
             media="(min-width:1200px)"
             srcset="assets/images/illustration-sign-up-desktop.svg"
           />
           <source
-            media="(min-width: 501px)"
+            media="(min-width: 500px)"
             srcset="assets/images/illustration-sign-up-tablet.svg"
           />
           <source
