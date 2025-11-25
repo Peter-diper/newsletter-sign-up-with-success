@@ -12,17 +12,11 @@ moudalBtn.addEventListener("click", hide);
 
 function checkEmail(e) {
   e.preventDefault();
-  if (email.value === "") {
-    errorText.classList.remove("d-n");
-    email.classList.add("input--notvalid");
-    return "done";
-  }
-  if (email.value.length < 12) {
-    errorText.classList.remove("d-n");
-    email.classList.add("input--notvalid");
-    return "done";
-  }
-  if (email.value.indexOf("@") === -1) {
+  if (
+    email.value === "" ||
+    email.value.length < 12 ||
+    email.value.indexOf("@") === -1
+  ) {
     errorText.classList.remove("d-n");
     email.classList.add("input--notvalid");
     return "done";
@@ -39,7 +33,7 @@ function checkEmail(e) {
   }, 600);
   setTimeout(() => {
     moudal.classList.add("setAnimation");
-  }, 400);
+  }, 800);
 }
 
 function hide(e) {

@@ -13,7 +13,12 @@
   </head>
   <body>
     <div class="moudal--selectarea"></div>
-    <section class="moudal d-n">
+    <section
+      class="moudal d-n"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-title"
+    >
       <img
         src="./assets/images/icon-success.svg"
         class="check--icon"
@@ -25,7 +30,7 @@
         <strong id="user--email">ash@loremcompany.com</strong>. Please open it
         and click the button inside to confirm your subscription.
       </p>
-      <button class="btn moudal--btn" id="moudal--btn" type="submit">
+      <button class="btn moudal--btn" id="moudal--btn" type="button">
         Dismiss message
       </button>
     </section>
@@ -50,12 +55,12 @@
           </div>
           <form action="" class="form" id="form" novalidate>
             <div class="form--header">
-              <label for="">Email address</label>
+              <label for="email-input">Email address</label>
               <span class="error--text d-n">Valid email required</span>
             </div>
             <div class="form--footer">
               <input
-                type="text"
+                type="email"
                 placeholder="email@company.com"
                 class="form--input"
                 name="email"
